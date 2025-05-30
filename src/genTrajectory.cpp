@@ -105,6 +105,10 @@ int main(int argc, char **argv)
       } else {
         vertex.addConstraint(mav_trajectory_generation::derivative_order::POSITION, input.row(row));
       }
+      // if (row == input.rows()-2) { // add velocity constraint to the second last vertex
+      //   Vector3d velocity(0.2, 0.0, 0.2);
+      //   vertex.addConstraint(mav_trajectory_generation::derivative_order::VELOCITY, velocity);
+      // }
       vertices.push_back(vertex);
     }
   }
