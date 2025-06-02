@@ -6,7 +6,7 @@
  
  ## Generate command
 ```
-./build/genTrajectory -i ./data/waypoints/perching_high.csv --v_max 1.0 --a_max 1.0 -o ./data/trajectories/perching_high_traj.csv
+./build/genTrajectory -i ./data/waypoints/perching_high.csv --v_max 0.5 --a_max 0.5 -o ./data/trajectories/perching_high_traj.csv
 
 ./build/genTrajectory -i ./data/waypoints/perching_mid1.csv --v_max 1.0 --a_max 1.0 -o ./data/trajectories/perching_mid_traj1.csv
 
