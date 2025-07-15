@@ -1,0 +1,31 @@
+1. c++轨迹创造
+
+如果希望能够创造一个轨迹, 那么命令为
+
+./build/genTrajectory -i examples/waypoints1.csv --v_max 1.0 --a_max 1.0 -o ./data_tunnel/traj1.csv
+
+其中该指令可以限制速度和加速度
+
+examples/waypoints1.csv 表示的是期望的轨迹, 期望轨迹约束为xyz三个点即可, 一定是3列, 至少两行
+(这种文件可以替换, 自己造一个也行)
+
+./data_tunnel/traj1.csv 表示生成的轨迹
+
+再把生成的轨迹复制好相对路径, 复制给traj_to_array.ipynb, 并且运行生成对应的轨迹
+
+2.Python轨迹创造
+
+如果希望能够创造一个轨迹, 那么命令为
+
+python3 scripts/generate_trajectory.py timed_waypoints_circle0.csv data_tunnel/circle0_py.csv --pieces 5
+
+该指令可以限制时间和yaw角的状态
+
+其中, timed_waypoints_circle0.csv一定是5列(这种文件可以替换)
+
+data_tunnel/circle0_py.csv表示的是生成的轨迹,
+同理，把生成的轨迹复制好相对路径, 复制给traj_to_array.ipynb, 并且运行生成对应的轨迹
+
+--pieces 5 表示将整段轨迹拆分成 5 段曲线拟合，更平滑、更可控
+
+
